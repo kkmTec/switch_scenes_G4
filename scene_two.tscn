@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://drmtmy3of5rce"]
+
+[ext_resource type="Script" path="res://level.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://dubj0ssa8ttsk" path="res://mixkit-arcade-game-complete-or-approved-mission-205.wav" id="2"]
+
+[node name="scene_two" type="Node2D"]
+script = ExtResource("1")
+level_name = "two"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 649.0
+color = Color(0.470588, 0.254902, 0.419608, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 479.0
+offset_top = 268.0
+offset_right = 530.0
+offset_bottom = 282.0
+text = "SCENE 2"
+
+[node name="brn_change_scene" type="Button" parent="."]
+offset_left = 446.0
+offset_top = 310.0
+offset_right = 577.0
+offset_bottom = 370.0
+text = "Change To Scene 1"
+
+[node name="exit_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2")
+
+[node name="lbl_click" type="Label" parent="."]
+offset_left = 475.0
+offset_top = 393.0
+offset_right = 544.0
+offset_bottom = 431.0
+text = "Clicks: 0"
+
+[node name="btn_click" type="Button" parent="."]
+offset_left = 443.0
+offset_top = 450.0
+offset_right = 574.0
+offset_bottom = 507.0
+text = "Click to add"
+
+[connection signal="pressed" from="brn_change_scene" to="." method="_on_btn_change_scene_pressed"]
+[connection signal="pressed" from="btn_click" to="." method="_on_btn_click_pressed"]
