@@ -7,7 +7,7 @@ func _init():
 
 func _ready():
 	print("main_ready")
-	#queue free all scenes except the first scene
+	#queue free all scenes except the first scene to make it work
 	$scene_two.queue_free()
 	current_level.connect("level_changed", Callable(self, "handle_level_changed"))
 
